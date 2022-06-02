@@ -1,30 +1,20 @@
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+
 const NavBar = () => {
   return (
-        <nav className="navbar navbar-expand-lg bg-light">
-            <div className="container-fluid">
-            <a className="navbar-brand" href="">Hot Wheels</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <a className="nav-link" href="">Autos</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="">Trucks</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="">Clasicos</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="">Super Mario Bros</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-  )
+        <Navbar bg="dark" variant="dark">
+            <Container>
+                <Nav className="me-auto">
+                    <Nav.Link href="# ">Autos</Nav.Link>
+                    <Nav.Link href="# ">Trucks</Nav.Link>
+                    <Nav.Link href="# ">Clásicos</Nav.Link>
+                    <Nav.Link href="# ">Super Mario Bros</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+    )
 }
 
 export default NavBar
