@@ -2,32 +2,40 @@ import Carousel from 'react-bootstrap/Carousel';
 import slider1 from './../../images/slider1.jpg';
 import slider2 from './../../images/slider2.jpg';
 import slider3 from './../../images/slider3.webp';
-import sliders from './Carrusel.css';
+import slider4 from './../../images/slider4.jpg';
+import sliders from './../Carrusel/Carrusel.css';
 
 
 const Carrusel = () => {
     return (
 
-            <Carousel variant="dark">
+            <Carousel className="text-white">
                 <Carousel.Item>
-                    <img className="d-block w-100 sliders" src={slider1} alt="Hot Wheels Primer Slider" />
+                    <img className="d-block w-100 sliders" src={slider1} alt="Hot Wheels Autos" />
                     <Carousel.Caption>
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h5>Categoría: Autos</h5>
+                    <p>Colección completa de Autos</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="d-block w-100 sliders" src={slider2} alt="Second slide" />
+                    <img className="d-block w-100 sliders" src={slider2} alt="Hot Wheels Trucks" />
                     <Carousel.Caption>
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h5>Categoría: Trucks</h5>
+                    <p>Colección completa de Trucks</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="d-block w-100 sliders" src={slider3} alt="Third slide" />
+                    <img className="d-block w-100 sliders" src={slider3} alt="Hot Wheels Clásicos" />
                     <Carousel.Caption>
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h5>Categoría: Clásicos</h5>
+                    <p>Colección Completa de Autos Clásicos</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className="d-block w-100 sliders" src={slider4} alt="Hot Wheels Super Mario Bros" />
+                    <Carousel.Caption>
+                    <h5>Categoría: Super Mario Bros</h5>
+                    <p>Colección Especial de Super Mario Bros</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

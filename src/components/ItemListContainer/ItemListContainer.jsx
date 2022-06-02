@@ -6,6 +6,12 @@ import clasicos from './../../images/clasicos.png';
 
 
 export default function ItemListContainer(){
+
+    //Se definen las props de las cards
+    let contenidoAutos = 'Aqui se mostrará el contenido de la categoría "Autos"'
+    let contenidoTrucks = 'Aqui se mostrará el contenido de la categoría "Trucks"'
+    let contenidoClasicos = 'Aqui se mostrará el contenido de la categoría "Clásicos"'
+
     return(
 
         <CardGroup className="container mt-5 text-center">
@@ -14,7 +20,7 @@ export default function ItemListContainer(){
                 <Card.Body>
                 <Card.Title>Autos</Card.Title>
                 <Card.Text> 
-                    Aqui se mostrará el contenido de la categoría "Autos"
+                    {contenidoAutos}
                 </Card.Text>
                 </Card.Body>
             </Card>
@@ -23,7 +29,7 @@ export default function ItemListContainer(){
                 <Card.Body>
                 <Card.Title>Trucks</Card.Title>
                 <Card.Text>
-                    Aqui se mostrará el contenido de la categoría "Trucks"
+                    {contenidoTrucks}
                 </Card.Text>
                 </Card.Body>
             </Card>
@@ -32,7 +38,7 @@ export default function ItemListContainer(){
                 <Card.Body>
                 <Card.Title>Clásicos</Card.Title>
                 <Card.Text>
-                    Aqui se mostrará el contenido de la categoría "Clásicos"
+                    {contenidoClasicos}
                 </Card.Text>
                 </Card.Body>
             </Card>
