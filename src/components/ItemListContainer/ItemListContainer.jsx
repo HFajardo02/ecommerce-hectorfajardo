@@ -5,12 +5,7 @@ import trucks from './../../images/trucks.png';
 import clasicos from './../../images/clasicos.png';
 
 
-export default function ItemListContainer(){
-
-    //Se definen las props de las cards
-    let contenidoAutos = 'Aqui se mostrará el contenido de la categoría "Autos"'
-    let contenidoTrucks = 'Aqui se mostrará el contenido de la categoría "Trucks"'
-    let contenidoClasicos = 'Aqui se mostrará el contenido de la categoría "Clásicos"'
+export default function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos}){
 
     return(
 
@@ -20,7 +15,7 @@ export default function ItemListContainer(){
                 <Card.Body>
                 <Card.Title>Autos</Card.Title>
                 <Card.Text> 
-                    {contenidoAutos}
+                    {contCardAutos}
                 </Card.Text>
                 </Card.Body>
             </Card>
@@ -29,7 +24,7 @@ export default function ItemListContainer(){
                 <Card.Body>
                 <Card.Title>Trucks</Card.Title>
                 <Card.Text>
-                    {contenidoTrucks}
+                    {contCardTrucks}
                 </Card.Text>
                 </Card.Body>
             </Card>
@@ -38,7 +33,7 @@ export default function ItemListContainer(){
                 <Card.Body>
                 <Card.Title>Clásicos</Card.Title>
                 <Card.Text>
-                    {contenidoClasicos}
+                    {contCardClasicos}
                 </Card.Text>
                 </Card.Body>
             </Card>

@@ -1,22 +1,26 @@
 import './css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import Cuerpo from './components/Cuerpo/Cuerpo';
 import NavBar from './components/NavBar/NavBar';
-import Carrusel from './components/Carrusel/Carrusel';
-import CartWidget from './components/CartWidget/CartWidget';
+import Cuerpo from './components/Cuerpo/Cuerpo';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
-  return (
 
-    <>
-      <CartWidget />
-      <NavBar />
-      <Carrusel />
-      <ItemListContainer />
-    </>
-    
-  );
+    //Se definen las props de las cards
+    let contenidoAutos = 'Aqui se mostrará el contenido de la categoría "Autos"'
+    let contenidoTrucks = 'Aqui se mostrará el contenido de la categoría "Trucks"'
+    let contenidoClasicos = 'Aqui se mostrará el contenido de la categoría "Clásicos"'
+
+    return (
+
+        <>
+            <NavBar />
+            <Cuerpo />
+            <ItemListContainer contCardAutos={contenidoAutos} contCardTrucks={contenidoTrucks} contCardClasicos={contenidoClasicos}/>
+        
+        </>
+      
+    );
 }
 
 export default App;
