@@ -1,10 +1,14 @@
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const ItemCount = () => {
-  return (
-    <div>ItemCount</div>
-  )
-}
+    function ItemCount (){
+
+        
+
+
+
+
+
+    }
 
 export default ItemCount
