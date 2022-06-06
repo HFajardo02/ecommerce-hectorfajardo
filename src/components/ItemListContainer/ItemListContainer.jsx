@@ -3,6 +3,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import autos from './../../images/autos.png';
 import trucks from './../../images/trucks.png';
 import clasicos from './../../images/clasicos.png';
+import ItemCount from '../ItemCount/ItemCount';
 
 
 export default function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos}){
@@ -16,6 +17,11 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
                 <Card.Title>Autos</Card.Title>
                 <Card.Text> 
                     {contCardAutos}
+                </Card.Text>
+                <Card.Text>
+                    <>
+                        <ItemCount />
+                    </>
                 </Card.Text>
                 </Card.Body>
             </Card>
