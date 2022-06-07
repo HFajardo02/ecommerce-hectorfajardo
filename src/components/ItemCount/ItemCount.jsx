@@ -16,17 +16,18 @@ import { useState } from 'react'
         }
 
         function verCarrito(){
-            console.log ("Productos en el carrito:", {count})
+            console.log ("Artículos seleccionados: ", {count})
         }
+
 
         return(
             <div>
-                <button onClick={onSubtract}>-</button>
-                <button>   {count}</button>
-                <button onClick={onAdd}>+</button>
+                <button disabled={ count <1 } onClick={onSubtract}><h2>-</h2></button>
+                <button><h2>{count}</h2></button>
+                <button disabled={ count >= stock } onClick={onAdd}><h2>+</h2></button>
                 <br />
                 <br />
-                <button onClick={verCarrito}>Agregar al carrito</button>
+                <button disabled={count<=0} onClick={verCarrito}>Agregar al carrito</button>
             </div>
         )
     }
