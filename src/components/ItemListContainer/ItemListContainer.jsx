@@ -20,7 +20,7 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
                 </Card.Text>
                 <Card.Text>
                     <>
-                        <ItemCount />
+                        <ItemCount stock="5" initial="1"/>
                     </>
                 </Card.Text>
                 </Card.Body>
@@ -32,6 +32,11 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
                 <Card.Text>
                     {contCardTrucks}
                 </Card.Text>
+                <Card.Text>
+                    <>
+                        <ItemCount stock="10" initial="1"/>
+                    </>
+                </Card.Text>
                 </Card.Body>
             </Card>
             <Card>
@@ -40,6 +45,11 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
                 <Card.Title>Clásicos</Card.Title>
                 <Card.Text>
                     {contCardClasicos}
+                </Card.Text>
+                <Card.Text>
+                    <>
+                        <ItemCount stock="15" initial="1"/>
+                    </>
                 </Card.Text>
                 </Card.Body>
             </Card>
