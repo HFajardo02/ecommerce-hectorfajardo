@@ -8,6 +8,10 @@ import ItemCount from '../ItemCount/ItemCount';
 
 export default function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos}){
 
+    const verCarrito = (count) => {
+        console.log ("Artículos seleccionados: ", {count})
+    }
+
     return(
 
         <CardGroup className="container mt-5 text-center">
@@ -20,7 +24,7 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
                 </Card.Text>
                 <Card.Text>
                     <>
-                        <ItemCount stock={5} initial={1}/>
+                        <ItemCount stock={5} initial={1} verCarrito={verCarrito}/>
                     </>
                 </Card.Text>
                 </Card.Body>
@@ -34,7 +38,7 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
                 </Card.Text>
                 <Card.Text>
                     <>
-                        <ItemCount stock={10} initial={1}/>
+                        <ItemCount stock={10} initial={1} verCarrito={verCarrito}/>
                     </>
                 </Card.Text>
                 </Card.Body>
@@ -48,7 +52,7 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
                 </Card.Text>
                 <Card.Text>
                     <>
-                        <ItemCount stock={15} initial={1}/>
+                        <ItemCount stock={15} initial={1} verCarrito={verCarrito}/>
                     </>
                 </Card.Text>
                 </Card.Body>
