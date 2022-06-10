@@ -17,8 +17,6 @@ const ItemListContainer = () => {
         .catch(err => console.log(err))
         // .finally(()=> )
     }, [])
-
-   
    
     return (
         <div>
