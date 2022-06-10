@@ -1,18 +1,15 @@
-import ItemCount from '../ItemCount/ItemCount';
 import { useEffect, useState } from "react";
+import ItemList from "../../components/ItemList/ItemList";
 import { getFetch } from "../../helpers/getFetch";
 
 
 
-
-export default function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos}){
-
+const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
-    
-    
+    const [loading, setLoading] = useState(true)   
+   
     useEffect(()=>{
-        getFetch()// llamada a la api
+        getFetch()
         .then((resp)=> {
                 setProductos(resp)
                 setLoading(false)
@@ -20,78 +17,18 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
         .catch(err => console.log(err))
         // .finally(()=> )
     }, [])
-
-    console.log(productos)
-
-
-
-    const verCarrito = (count) => {
-        console.log ("Artículos seleccionados: ", {count})
-    }
-
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
-    
-    
-    useEffect(()=>{
-        getFetch()// llamada a la api
-        .then((resp)=> {
-                setProductos(resp)
-                setLoading(false)
-        })
-        .catch(err => console.log(err))
-        // .finally(()=> )
-    }, [])
-
-    console.log(productos)
-
-
-    return(
-
-        {/* <CardGroup className="container mt-5 text-center">
-            <Card>
-                <Card.Img variant="top" src={autos} />
-                <Card.Body>
-                <Card.Title>Autos</Card.Title>
-                <Card.Text> 
-                    {contCardAutos}
-                </Card.Text>
-                <Card.Text>
-                    <>
-                        <ItemCount stock={5} initial={1} verCarrito={verCarrito}/>
-                    </>
-                </Card.Text>
-                </Card.Body>
-            </Card>
-            <Card>
-                <Card.Img variant="top" src={trucks} />
-                <Card.Body>
-                <Card.Title>Trucks</Card.Title>
-                <Card.Text>
-                    {contCardTrucks}
-                </Card.Text>
-                <Card.Text>
-                    <>
-                        <ItemCount stock={10} initial={1} verCarrito={verCarrito}/>
-                    </>
-                </Card.Text>
-                </Card.Body>
-            </Card>
-            <Card>
-                <Card.Img variant="top" src={clasicos} />
-                <Card.Body>
-                <Card.Title>Clásicos</Card.Title>
-                <Card.Text>
-                    {contCardClasicos}
-                </Card.Text>
-                <Card.Text>
-                    <>
-                        <ItemCount stock={15} initial={1} verCarrito={verCarrito}/>
-                    </>
-                </Card.Text>
-                </Card.Body>
-            </Card>
-        </CardGroup> */}
-        
+   
+    return (
+        <div>
+            { loading ? 
+                <h1>Cargando...</h1>            
+            :   
+                <div>
+                      <ItemList productos={productos} />                   
+                </div>             
+            }
+        </div>
     )
 }
+
+export default ItemListContainer
