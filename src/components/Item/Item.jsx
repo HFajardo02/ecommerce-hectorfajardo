@@ -1,54 +1,12 @@
-import ItemCount from '../ItemCount/ItemCount';
-import { useEffect, useState } from "react";
-import { getFetch } from "../../helpers/getFetch";
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import autos from './../../images/autos.png';
+import trucks from './../../images/trucks.png';
+import clasicos from './../../images/clasicos.png';
 
-
-
-
-export default function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos}){
-
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
-    
-    
-    useEffect(()=>{
-        getFetch()// llamada a la api
-        .then((resp)=> {
-                setProductos(resp)
-                setLoading(false)
-        })
-        .catch(err => console.log(err))
-        // .finally(()=> )
-    }, [])
-
-    console.log(productos)
-
-
-
-    const verCarrito = (count) => {
-        console.log ("Artículos seleccionados: ", {count})
-    }
-
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
-    
-    
-    useEffect(()=>{
-        getFetch()// llamada a la api
-        .then((resp)=> {
-                setProductos(resp)
-                setLoading(false)
-        })
-        .catch(err => console.log(err))
-        // .finally(()=> )
-    }, [])
-
-    console.log(productos)
-
-
-    return(
-
-        {/* <CardGroup className="container mt-5 text-center">
+const Item ({prod}) => {
+    return (
+        <CardGroup className="container mt-5 text-center">
             <Card>
                 <Card.Img variant="top" src={autos} />
                 <Card.Body>
@@ -91,7 +49,8 @@ export default function ItemListContainer({contCardAutos, contCardTrucks, contCa
                 </Card.Text>
                 </Card.Body>
             </Card>
-        </CardGroup> */}
-        
+        </CardGroup>
     )
 }
+
+export default Item
