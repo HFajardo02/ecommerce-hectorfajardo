@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import Cuerpo from './components/Cuerpo/Cuerpo';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Cuerpo />
             <ItemListContainer />
             <ItemCount initial={1} stock={10} verCarrito={verCarrito}/>
+            <ItemDetailContainer />
         
         </>
       

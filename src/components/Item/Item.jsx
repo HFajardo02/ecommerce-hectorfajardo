@@ -17,6 +17,9 @@ const Item = ({prod}) => {
                 <Card.Text> 
                     ${prod.precio} MXN
                 </Card.Text>
+                <Card.Text>
+                    <button>Detalle del producto</button>
+                </Card.Text>
                 {/* <Card.Text>
                     <>
                         <ItemCount stock={prod.stock} initial={1} verCarrito={verCarrito}/>

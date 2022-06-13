@@ -1,4 +1,4 @@
-//import prod1 from './../images/67-Shelby-GT500-2010-NM.jpeg';
+//import prod1 from './../images/prod1.jpg';
 
 let productos = [
     {
@@ -9,7 +9,7 @@ let productos = [
         "series": ["2010 New Models"],
         "series_num": ["1/44"],
         //"photo_url": prod1,
-        "photo_url": ["https://static.wikia.nocookie.net/hotwheels/images/b/b5/67_Shelby_GT500_-_2010_NM.jpg/revision/latest?cb=20090913235854"],
+        "photo_url": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/67_Shelby_GT500_-_2010_NM.jpg/revision/latest?cb=20090913235854",
         "year": 2010,
         "stock": 5,
         "precio": 100,
@@ -21,7 +21,8 @@ let productos = [
         "model": ["Tooligan"],
         "series": ["2010 New Models"],
         "series_num": ["2/44"],
-        "photo_url": ["https://static.wikia.nocookie.net/hotwheels/images/4/4f/Tooligan_-_10_NM.jpg/revision/latest?cb=20090930040830"],        "year": 2010,
+        "photo_url": "https://static.wikia.nocookie.net/hotwheels/images/4/4f/Tooligan_-_10_NM.jpg/revision/latest?cb=20090930040830",
+        "year": 2010,
         "stock": 10,
         "precio": 75,
     },
@@ -49,12 +50,12 @@ let productos = [
                 resolve(productos)          
             }
         },2000)    
-        // reject('no qtengo nada para')    
+            
     })
 }  
 
 
-// consulta detalla de un producto
+// consulta para detalle de un producto
 let producto =  {
     "id": 1,
     "toy_num": ["R0916"],
@@ -62,8 +63,8 @@ let producto =  {
     "model": ["67 Shelby GT500"],
     "series": ["2010 New Models"],
     "series_num": ["1/44"],
-    //"photo_url": prod1,
-    "photo_url": ["https://static.wikia.nocookie.net/hotwheels/images/b/b5/67_Shelby_GT500_-_2010_NM.jpg/revision/latest?cb=20090913235854"],
+    //"photo": {prod1},
+    "photo": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/67_Shelby_GT500_-_2010_NM.jpg/revision/latest?cb=20090913235854",
     "year": 2010,
     "stock": 5,
     "precio": 100,
