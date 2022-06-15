@@ -10,12 +10,15 @@ const Item = ({prod}) => {
             <Card>
                 <Card.Img src={prod.photo_url}/>
                 <Card.Body>
-                <Card.Title>{prod.model}</Card.Title>
+                <Card.Title>Nombre: {prod.model}</Card.Title>
                 <Card.Text> 
-                    {prod.series}
+                    Serie: {prod.series}
                 </Card.Text>
                 <Card.Text> 
-                    ${prod.precio} MXN
+                    Categoría: {prod.categoria}
+                </Card.Text>
+                <Card.Text> 
+                    Precio: ${prod.precio} MXN
                 </Card.Text>
                 <Card.Text>
                     <button>Detalle del producto</button>

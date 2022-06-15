@@ -3,6 +3,7 @@
 let productos = [
     {
         "id": 1,
+        "categoria": "Autos",
         "toy_num": ["R0916"],
         "col_num": ["001"],
         "model": ["67 Shelby GT500"],
@@ -16,6 +17,7 @@ let productos = [
     },
     {
         "id": 2,
+        "categoria": "Trucks",
         "toy_num": ["R0917"],
         "col_num": ["002"],
         "model": ["Tooligan"],
@@ -28,6 +30,7 @@ let productos = [
     },
     {
         "id":3,
+        "categoria": "Clásicos",
         "toy_num": ["R0918"],
         "col_num": ["003"],
         "model": ["67 Pontiac Firebird 400"],
@@ -58,6 +61,7 @@ let productos = [
 // consulta para detalle de un producto
 let producto =  {
     "id": 1,
+    "categoria": "Autos",
     "toy_num": ["R0916"],
     "col_num": ["001"],
     "model": ["67 Shelby GT500"],

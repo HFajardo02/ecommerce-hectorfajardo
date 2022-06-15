@@ -1,10 +1,13 @@
 import './css/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Rutas, Routes, Route, Navigate } from 'react-router-dom';
+
 import NavBar from './components/NavBar/NavBar';
 import Cuerpo from './components/Cuerpo/Cuerpo';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
 
 function App() {
 
@@ -13,16 +16,28 @@ function App() {
     }
 
     return (
-
-        <>
-            <NavBar />
-            <Cuerpo />
-            <ItemListContainer />
-            <ItemCount initial={1} stock={10} verCarrito={verCarrito}/>
-            <ItemDetailContainer />
         
+        <>
+
+            <Rutas>
+                
+                <NavBar />
+                <Cuerpo />
+                
+                <Routes>
+                    <Route index path='/' element={<ItemListContainer />} />
+                    <Route path='/detalle' element={<ItemDetailContainer />} />
+                    <Route path='/cart' element={<Cart />} />/>
+
+                    <Route path='*' element={<Navigate to='/' /> } />
+
+                </Routes>
+                <ItemCount initial={1} stock={10} verCarrito={verCarrito}/>
+
+            </Rutas>
+    
         </>
-      
+              
     );
 }
 

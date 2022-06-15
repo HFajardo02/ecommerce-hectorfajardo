@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ItemList from "../../components/ItemList/ItemList";
 import { getFetch } from "../../helpers/getFetch";
 
+import ItemList from "../../components/ItemList/ItemList";
 
 
 const ItemListContainer = () => {
