@@ -1,15 +1,34 @@
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+
 const ItemDetail = ({producto}) => {
     return(
-        <div>
-            <div className="row">
-                <img src={producto.photo} alt="" className="w-100"/>
-            </div>
-            <div className="col-md-6">
-                <h2>Nombre: {producto.model}</h2>
-                <h3>Serie: {producto.series}</h3>
-                <h4>Precio: {producto.precio} MXN</h4>
-            </div>
-        </div>
+        
+        <Row xs={1} md={2} lg={4} className="container mt-5 text-center">
+            <Col>
+                <CardGroup>
+                    <Card>
+                        <Card.Img src={producto.photo_url}/>
+                        <Card.Body>
+                            <Card.Title>Nombre: {producto.model}</Card.Title>
+                            <Card.Text> 
+                                Serie: {producto.series}
+                                <br />
+                                Categoría: {producto.categoria}
+                                <br />
+                                Precio: ${producto.precio} MXN
+                                <br />
+                                Stock: {producto.stock}
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </CardGroup>
+            </Col>
+        </Row>
+
     )
 
 }

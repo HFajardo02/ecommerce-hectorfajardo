@@ -2,8 +2,8 @@
 
 let productos = [
     {
-        "id": 1,
-        "categoria": "Autos",
+        "id": "1",
+        "categoria": "autos",
         "toy_num": ["R0916"],
         "col_num": ["001"],
         "model": ["67 Shelby GT500"],
@@ -16,8 +16,8 @@ let productos = [
         "precio": 100,
     },
     {
-        "id": 2,
-        "categoria": "Trucks",
+        "id": "2",
+        "categoria": "trucks",
         "toy_num": ["R0917"],
         "col_num": ["002"],
         "model": ["Tooligan"],
@@ -29,8 +29,8 @@ let productos = [
         "precio": 75,
     },
     {
-        "id":3,
-        "categoria": "Clásicos",
+        "id":"3",
+        "categoria": "clasicos",
         "toy_num": ["R0918"],
         "col_num": ["003"],
         "model": ["67 Pontiac Firebird 400"],
@@ -42,8 +42,8 @@ let productos = [
         "precio": 120,
     },
     {
-        "id":4,
-        "categoria": "Super Mario Bros",
+        "id":"4",
+        "categoria": "super mario bros",
         "toy_num": ["Mario0918"],
         "col_num": ["003"],
         "model": ["Super Mario 400"],
@@ -73,18 +73,18 @@ let productos = [
 
 // consulta para detalle de un producto
 let producto =  {
-    "id": 1,
-    "categoria": "Autos",
-    "toy_num": ["R0916"],
-    "col_num": ["001"],
-    "model": ["67 Shelby GT500"],
-    "series": ["2010 New Models"],
-    "series_num": ["1/44"],
-    //"photo": {prod1},
-    "photo": "https://static.wikia.nocookie.net/hotwheels/images/b/b5/67_Shelby_GT500_-_2010_NM.jpg/revision/latest?cb=20090913235854",
-    "year": 2010,
-    "stock": 5,
-    "precio": 100,
+    "id": "1",
+        "categoria": "autos",
+        "toy_num": ["R0916"],
+        "col_num": ["001"],
+        "model": ["67 Shelby GT500"],
+        "series": ["2010 New Models"],
+        "series_num": ["1/44"],
+        //"photo_url": prod1,
+        "photo_url": "https://versareanosdourados.vteximg.com.br/arquivos/ids/212627-1000-1000/Miniatura-1967-Shelby-Gt-500-Escala-1-38-Branco-E-Azul.jpg?v=637656023007530000",
+        "year": 2010,
+        "stock": 5,
+        "precio": 100,
   }
   
 

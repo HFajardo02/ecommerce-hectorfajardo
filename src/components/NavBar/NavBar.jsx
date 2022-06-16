@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import { NavLink } from 'react-router-dom';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -14,10 +15,10 @@ const NavBar = () => {
 
                 <Container>
                     <Nav className="me-auto">
-                        <Nav.Link href="# ">Autos</Nav.Link>
-                        <Nav.Link href="# ">Trucks</Nav.Link>
-                        <Nav.Link href="# ">Clásicos</Nav.Link>
-                        <Nav.Link href="# ">Super Mario Bros</Nav.Link>
+                        <NavLink to="categoria/autos" >Autos</NavLink>
+                        <NavLink to="categoria/trucks" >Trucks</NavLink>
+                        <NavLink to="categoria/clasicos" >Clásicos</NavLink>
+                        <NavLink to="categoria/super mario bros" >Super Mario Bros</NavLink>
                         
                     </Nav>
                 </Container>
