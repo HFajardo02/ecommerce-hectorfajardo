@@ -1,5 +1,3 @@
-//import prod1 from './../images/prod1.jpg';
-
 let productos = [
     {
         "id": "1",
@@ -72,7 +70,7 @@ let productos = [
 
 
 // consulta para detalle de un producto
-let producto =  {
+/* let producto =  {
     "id": "1",
         "categoria": "autos",
         "toy_num": ["R0916"],
@@ -85,14 +83,14 @@ let producto =  {
         "year": 2010,
         "stock": 5,
         "precio": 100,
-  }
+} */
   
 
 export const getFetchOne = () =>{    
    
     return new Promise( (resolve, reject)=>{   
         setTimeout(()=>{
-            resolve(producto)   
+            resolve(productos)   
         },2000)    
             
     })

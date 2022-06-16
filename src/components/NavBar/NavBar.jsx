@@ -14,12 +14,11 @@ const NavBar = () => {
 
 
                 <Container>
-                    <Nav className="me-auto">
+                    <Nav>
                         <NavLink to="categoria/autos" >Autos</NavLink>
                         <NavLink to="categoria/trucks" >Trucks</NavLink>
                         <NavLink to="categoria/clasicos" >Clásicos</NavLink>
                         <NavLink to="categoria/super mario bros" >Super Mario Bros</NavLink>
-                        
                     </Nav>
                 </Container>
 

@@ -6,19 +6,19 @@ const Item = ({prod}) => {
             className='col-md-4 p-1'                                                           
         >                    
             <div className="card w-100 mt-5 text-center" >
-                <div className="card-header h4">
+                <div className="card-header h3">
                     {`Nombre: ${prod.model}`}                                                           
                 </div>
                 <div className="card-body">
                     <img src={prod.photo_url} alt='' className='w-50' />
                 </div>
-                <div className="card-footer">
+                <div className="card-footer h4">
 
                     {`Categoria: ${prod.categoria}`}
                     <br />
                     {`Stock Disponible: ${prod.stock}`}
                     <br />
-                    {`Precio: ${prod.precio} MXN`}
+                    {`Precio: $${prod.precio} MXN`}
                     <br />
                     <br />
                     <Link to={`/detalle/${prod.id}`} >
