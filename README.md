@@ -4,20 +4,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Librerias utilizadas en este proyecto!!!
 
-1.- Navbar from 'react-bootstrap/Navbar';
-2.- Container from 'react-bootstrap/Container';
-3.- { Link } from 'react-router-dom';
-4.- { NavLink } from 'react-router-dom';
-5.- Nav from 'react-bootstrap/Nav';
-6.- { useEffect } from "react";
-7.- { useState } from "react";
-8.- { useParams } from "react-router-dom";
-9.- Card from 'react-bootstrap/Card';
-10.- CardGroup from 'react-bootstrap/CardGroup';
-11.- Row from 'react-bootstrap/Row';
-12.- Col from 'react-bootstrap/Col';
-13.- 'bootstrap/dist/css/bootstrap.min.css';
-14.- { BrowserRouter as Rutas, Routes, Route, Navigate } from 'react-router-dom';
+1.- Navbar from 'react-bootstrap/Navbar';\
+2.- Container from 'react-bootstrap/Container';\
+3.- { Link } from 'react-router-dom';\
+4.- { NavLink } from 'react-router-dom';\
+5.- Nav from 'react-bootstrap/Nav';\
+6.- { useEffect } from "react";\
+7.- { useState } from "react";\
+8.- { useParams } from "react-router-dom";\
+9.- Card from 'react-bootstrap/Card';\
+10.- CardGroup from 'react-bootstrap/CardGroup';\
+11.- Row from 'react-bootstrap/Row';\
+12.- Col from 'react-bootstrap/Col';\
+13.- 'bootstrap/dist/css/bootstrap.min.css';\
+14.- { BrowserRouter as Rutas, Routes, Route, Navigate } from 'react-router-dom';\
 
 
 ## Available Scripts
