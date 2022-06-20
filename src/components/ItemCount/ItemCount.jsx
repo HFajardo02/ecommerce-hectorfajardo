@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+
     function ItemCount ({stock, initial, verCarrito}){
 
         const [count, setCount]= useState(initial)
@@ -20,6 +21,7 @@ import { useState } from 'react'
                 <br />
                 <br />
                 <button disabled={count<=0} onClick={() => verCarrito(count)}>Agregar al carrito</button>
+                
             </div>
         )
     }

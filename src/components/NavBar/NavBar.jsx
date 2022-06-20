@@ -14,7 +14,7 @@ const NavBar = () => {
 
 
                 <Container>
-                    <Nav>
+                    <Nav >
                         <NavLink to="categoria/autos" >Autos</NavLink>
                         <NavLink to="categoria/trucks" >Trucks</NavLink>
                         <NavLink to="categoria/clasicos" >Clásicos</NavLink>

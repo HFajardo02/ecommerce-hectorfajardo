@@ -49,7 +49,7 @@ let productos = [
         "series_num": ["3/44"],
         "photo_url": "https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/45496883232_3.jpg",
         "year": 2010,
-        "stock": 15,
+        "stock": 8,
         "precio": 120,
     },
   ];
