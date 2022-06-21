@@ -7,16 +7,10 @@ const InputCount= ()=> {
     return (
         <>
             <Link to='/cart' >
-                <button 
-                    className="btn btn-outline-primary" 
-                    onClick={()=>console.log('Ver carrito de compra') } 
-                >Ver carrito</button><br /><br />
+                <button className="btn btn-secondary btn-sm" onClick={()=>console.log('Ver carrito') }>Ver carrito</button><br /><br />
             </Link>
             <Link to='/' >
-                <button 
-                    className="btn btn-outline-primary" 
-                    onClick={()=>console.log('Ir al Inicio') } 
-                >Seguir comprando</button>
+                <button className="btn btn-secondary btn-sm" onClick={()=>console.log('Ir al Inicio') }>Seguir comprando</button>
             </Link>
         </>
     )
@@ -25,13 +19,9 @@ const InputCount= ()=> {
 
 
 const ButtonCount= ({handleInter})=> {
-    return <button 
-                className="btn btn-outline-success" 
-                onClick={handleInter}
-            >
-                Agregar Al carrito
+    return <button className="btn btn-dark" onClick={handleInter} >
+                Agregar al carrito
             </button>
-
 }
 
 const Intercambiabilidad = () => {

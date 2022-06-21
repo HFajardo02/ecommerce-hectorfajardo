@@ -21,7 +21,7 @@ let productos = [
         "model": ["Tooligan"],
         "series": ["2010 New Models"],
         "series_num": ["2/44"],
-        "photo_url": "https://scontent.fmex5-1.fna.fbcdn.net/v/t45.5328-4/64406885_2180154728750157_5185091696068657152_n.jpg?stp=dst-jpg_p960x960&_nc_cat=102&ccb=1-7&_nc_sid=c48759&_nc_ohc=XEQZ3rqbSVwAX8TAC6Y&_nc_ht=scontent.fmex5-1.fna&oh=00_AT9Ym8ed2r73r1bglDeCGqNnFIOO01tXXbpuSqpJqVRGqg&oe=62AFB42B",
+        "photo_url": "https://www.escalaminiaturas.com.br/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/r/0/r0917.jpg",
         "year": 2010,
         "stock": 10,
         "precio": 75,
