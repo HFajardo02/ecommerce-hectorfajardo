@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
 
 
     useEffect(() => {
-        getFetchOne()
+        getFetchOne(id)
             .then((resp) => setProducto(resp.find(prod => prod.id === id)))
             .catch(err => console.log(err))
     }, [])

@@ -9,14 +9,14 @@ const Cart = () => {
                 {
                     cart.map(item => <li key={item.id}>
                         <div className="w-25">
-                            <img src={item.foto} className='w-25' />
+                            <img src={item.photo_url} className='w-25' alt="ilustracion"/>
                         </div>
-                        nombre: {item.nombre} precio: {item.precio} cantidad: {item.cantidad}
+                        Nombre: {item.model} Precio: ${item.precio} MXN cantidad: {item.cantidad}
                     </li>  )
                 }
             </ul>
             <div>
-                <button onClick={vaciarCarrito} >Vaciar Carrito</button>
+                <button onClick={vaciarCarrito}>Vaciar Carrito</button>
             </div>
         </div>
     )

@@ -7,7 +7,6 @@ let productos = [
         "model": ["67 Shelby GT500"],
         "series": ["2010 New Models"],
         "series_num": ["1/44"],
-        //"photo_url": prod1,
         "photo_url": "https://versareanosdourados.vteximg.com.br/arquivos/ids/212627-1000-1000/Miniatura-1967-Shelby-Gt-500-Escala-1-38-Branco-E-Azul.jpg?v=637656023007530000",
         "year": 2010,
         "stock": 5,
