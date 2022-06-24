@@ -35,12 +35,8 @@ const Intercambiabilidad = () => {
     return (
         <div>
             {
-                inputType === 'button' ? 
-                    <ButtonCount handleInter={handleInter} />
-                : 
-                    <InputCount />
+                inputType === 'button' ? <ButtonCount handleInter={handleInter} /> : <InputCount />
             }
-             {/* <Count onConfirm={addToCart} maxQuantity={itemMax} />  */}
         </div>
     )
 }

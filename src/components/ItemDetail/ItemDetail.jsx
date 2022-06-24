@@ -4,8 +4,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import ItemCount from '../ItemCount/ItemCount';
-import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad';
+//import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad';
 import { useCartContext } from '../../contexts/cartContext';
+import { Link } from 'react-router-dom';
 
 
 const ItemDetail = ({producto}) => {
@@ -15,6 +16,8 @@ const ItemDetail = ({producto}) => {
     const verCarrito = (count) => {
         console.log ("Artículos seleccionados: ", {count})
         addToCart( {...producto, cantidad: count} )
+
+        
     }
 
     console.log(cart)
@@ -24,23 +27,26 @@ const ItemDetail = ({producto}) => {
                 <Col>
                     <CardGroup>
                         <Card>
-                            <Card.Img src={producto.photo_url}/>
                             <Card.Body>
-                                <Card.Title>Nombre: {producto.model}</Card.Title>
+                                <Card.Title><h2> {producto.model} </h2></Card.Title>
+                                <Card.Img src={producto.photo_url}/>
                                 <Card.Text> 
-                                    Serie: {producto.series}
+                                    <b>Serie:</b> {producto.series}
                                     <br />
-                                    Categoría: {producto.categoria}
+                                    <b>Categoría:</b> {producto.categoria}
                                     <br />
-                                    Precio: ${producto.precio} MXN
+                                    <b>Precio:</b> ${producto.precio} MXN
                                     <br />
-                                    Stock: {producto.stock}
+                                    <b>Stock:</b> {producto.stock}
                                 </Card.Text>
                                 <Card.Text>
-                                <ItemCount initial={1} stock={producto.stock} verCarrito={verCarrito}/>
+                                    <ItemCount initial={1} stock={producto.stock} verCarrito={verCarrito}/>
                                 </Card.Text>
                                 <Card>
-                                    <Intercambiabilidad />
+                                    <Link to='/cart' >
+                                    <button className="btn btn-secondary" onClick={()=>console.log('Ver carrito') }>Ver carrito</button><br /><br />
+                                    </Link>
+                                    {/* <Intercambiabilidad /> */}
                                 </Card>
                             </Card.Body>
                         </Card>
