@@ -31,7 +31,6 @@ import swal from 'sweetalert'
                 <br />
                 <br />
                 <button className="btn btn-secondary" disabled={count<=0} onClick={() => {verCarrito(count); btnAlerta()}}>Agregar al carrito</button>
-                
             </div>
         )
     }

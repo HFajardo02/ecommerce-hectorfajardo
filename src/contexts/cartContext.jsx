@@ -10,13 +10,9 @@ export const CartContextProvider = ({ children }) => {
     
     const addToCart = (item) => {
 
-        console.log("QUE ES ESTE ITEM: ", item)
-
         setCart([
-            console.log("ALGO...CART: ", cart),
             ...cart,
             item,
-            console.log("OTRO ITEM: ", item) 
         ])
     }
 

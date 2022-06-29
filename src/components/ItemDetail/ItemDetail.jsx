@@ -16,8 +16,6 @@ const ItemDetail = ({producto}) => {
     const verCarrito = (count) => {
         console.log ("Artículos seleccionados: ", {count})
         addToCart( {...producto, cantidad: count} )
-
-        
     }
 
     console.log(cart)
@@ -44,7 +42,7 @@ const ItemDetail = ({producto}) => {
                                 </Card.Text>
                                 <Card>
                                     <Link to='/cart' >
-                                    <button className="btn btn-secondary" onClick={()=>console.log('Ver carrito') }>Ver carrito</button><br /><br />
+                                        <button className="btn btn-secondary" onClick={()=>console.log('Ver carrito') }>Ver carrito</button><br /><br />
                                     </Link>
                                     {/* <Intercambiabilidad /> */}
                                 </Card>
