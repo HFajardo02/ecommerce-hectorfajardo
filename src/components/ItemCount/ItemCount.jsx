@@ -6,6 +6,7 @@ import swal from 'sweetalert'
 
         const [count, setCount]= useState(initial)
 
+        
         function onSubstract(){
             setCount(count-1)
         }
@@ -19,7 +20,7 @@ import swal from 'sweetalert'
                 title:"Producto agregado al carrito",
                 icon: "success",
                 timer: "1500",
-            }); 
+            });
         }
         
 

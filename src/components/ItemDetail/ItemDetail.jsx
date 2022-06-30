@@ -14,7 +14,7 @@ const ItemDetail = ({producto}) => {
     const { cart, addToCart } = useCartContext()
 
     const verCarrito = (count) => {
-        console.log ("Artículos seleccionados: ", {count})
+        console.log ("Número de Artículos Seleccionados: ", {count})
         addToCart( {...producto, cantidad: count} )
     }
 

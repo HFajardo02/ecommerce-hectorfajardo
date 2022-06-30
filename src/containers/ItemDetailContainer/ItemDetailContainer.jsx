@@ -12,17 +12,14 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams ()
 
-    console.log("Desde ItemDetailContainer: ", id)
-
-
     useEffect(() => {
         getFetchOne(id)
             .then((resp) => setProducto(resp.find(prod => prod.id === id)))
             .catch(err => console.log(err))
     }, [])
 
-  return <ItemDetail producto={producto}/>
-  
+    return <ItemDetail producto={producto}/>
+    
 }
 
 export default ItemDetailContainer
