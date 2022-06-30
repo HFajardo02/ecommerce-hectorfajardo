@@ -33,9 +33,11 @@ const ItemDetail = ({producto}) => {
                                     <br />
                                     <b>Categoría:</b> {producto.categoria}
                                     <br />
+                                    <b>Año:</b> {producto.year}
+                                    <br />
                                     <b>Precio:</b> ${producto.precio} MXN
                                     <br />
-                                    <b>Stock:</b> {producto.stock}
+                                    <b>Stock:</b> {producto.stock} unidades
                                 </Card.Text>
                                 <Card.Text>
                                     <ItemCount initial={1} stock={producto.stock} verCarrito={verCarrito}/>

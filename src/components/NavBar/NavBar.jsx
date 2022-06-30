@@ -15,10 +15,10 @@ const NavBar = () => {
 
                 <Container>
                     <Nav >
-                        <NavLink to="categoria/autos" >Autos</NavLink>
-                        <NavLink to="categoria/trucks" >Trucks</NavLink>
-                        <NavLink to="categoria/clasicos" >Clásicos</NavLink>
-                        <NavLink to="categoria/super mario bros" >Super Mario Bros</NavLink>
+                        <NavLink to="categoria/Autos" >Autos</NavLink>
+                        <NavLink to="categoria/Trucks" >Trucks</NavLink>
+                        <NavLink to="categoria/Clasicos" >Clásicos</NavLink>
+                        <NavLink to="categoria/Super Mario Bros" >Super Mario Bros</NavLink>
                     </Nav>
                 </Container>
 

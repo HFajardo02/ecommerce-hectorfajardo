@@ -28,7 +28,6 @@ const ItemListContainer = () => {
             .finally(()=> setLoading(false))           
         }
         
-        // .finally(()=> )
     }, [categoriaId])
 
 
