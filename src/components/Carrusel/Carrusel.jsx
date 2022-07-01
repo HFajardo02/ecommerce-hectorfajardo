@@ -3,7 +3,6 @@ import slider1 from './../../images/slider1.jpg';
 import slider2 from './../../images/slider2.jpg';
 import slider3 from './../../images/slider3.webp';
 import slider4 from './../../images/slider4.jpg';
-import sliders from './../Carrusel/Carrusel.css';
 
 
 const Carrusel = () => {
@@ -14,14 +13,14 @@ const Carrusel = () => {
                     <img className="d-block w-100 sliders" src={slider1} alt="Hot Wheels Autos" />
                     <Carousel.Caption>
                     <h5>Categoría: Autos</h5>
-                    <p>Colección completa de Autos</p>
+                    <p>Colección Completa de Autos</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img className="d-block w-100 sliders" src={slider2} alt="Hot Wheels Trucks" />
                     <Carousel.Caption>
                     <h5>Categoría: Trucks</h5>
-                    <p>Colección completa de Trucks</p>
+                    <p>Colección Completa de Trucks</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
