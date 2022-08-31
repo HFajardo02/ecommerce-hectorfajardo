@@ -13,29 +13,29 @@ const Carrusel = () => {
                 <Carousel.Item>
                     <img className="d-block w-100 sliders" src={slider1} alt="Hot Wheels Autos" />
                     <Carousel.Caption>
-                    <h5>Categoría: Autos</h5>
-                    <p>Colección completa de Autos</p>
+                        <h5>Categoría: Autos</h5>
+                        <p>Colección Completa de Autos</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img className="d-block w-100 sliders" src={slider2} alt="Hot Wheels Trucks" />
                     <Carousel.Caption>
-                    <h5>Categoría: Trucks</h5>
-                    <p>Colección completa de Trucks</p>
+                        <h5>Categoría: Trucks</h5>
+                        <p>Colección Completa de Trucks</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img className="d-block w-100 sliders" src={slider3} alt="Hot Wheels Clásicos" />
                     <Carousel.Caption>
-                    <h5>Categoría: Clásicos</h5>
-                    <p>Colección Completa de Autos Clásicos</p>
+                        <h5>Categoría: Clásicos</h5>
+                        <p>Colección Completa de Autos Clásicos</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img className="d-block w-100 sliders" src={slider4} alt="Hot Wheels Super Mario Bros" />
                     <Carousel.Caption>
-                    <h5>Categoría: Super Mario Bros</h5>
-                    <p>Colección Especial de Super Mario Bros</p>
+                        <h5>Categoría: Super Mario Bros</h5>
+                        <p>Colección Especial de Super Mario Bros</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
