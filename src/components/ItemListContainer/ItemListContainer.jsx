@@ -4,8 +4,15 @@ import autos from './../../images/autos.png';
 import trucks from './../../images/trucks.png';
 import clasicos from './../../images/clasicos.png';
 import mariobros from './../../images/mariobros.png';
+import ItemCount from '../ItemCount/ItemCount';
 
 function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos, contCardMarioBros}) {
+
+const verCarrito = (count) => {
+    console.log ("Artículos seleccionados: ", {count})
+}
+
+
   return (
     <CardGroup className="container mt-5 text-center">
             <Card>
@@ -15,6 +22,11 @@ function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos, con
                     <Card.Text> 
                         {contCardAutos}
                     </Card.Text>
+                    <Card.Text>
+                    <>
+                        <ItemCount stock={5} initial={1} verCarrito={verCarrito}/>
+                    </>
+                </Card.Text>
                 </Card.Body>
             </Card>
             <Card>
@@ -24,6 +36,11 @@ function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos, con
                     <Card.Text>
                         {contCardTrucks}
                     </Card.Text>
+                    <Card.Text>
+                    <>
+                        <ItemCount stock={10} initial={1} verCarrito={verCarrito}/>
+                    </>
+                </Card.Text>
                 </Card.Body>
             </Card>
             <Card>
@@ -33,6 +50,11 @@ function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos, con
                     <Card.Text>
                         {contCardClasicos}
                     </Card.Text>
+                    <Card.Text>
+                    <>
+                        <ItemCount stock={15} initial={1} verCarrito={verCarrito}/>
+                    </>
+                </Card.Text>
                 </Card.Body>
             </Card>
             <Card>
@@ -42,6 +64,11 @@ function ItemListContainer({contCardAutos, contCardTrucks, contCardClasicos, con
                     <Card.Text>
                         {contCardMarioBros}
                     </Card.Text>
+                    <Card.Text>
+                    <>
+                        <ItemCount stock={8} initial={1} verCarrito={verCarrito}/>
+                    </>
+                </Card.Text>
                 </Card.Body>
             </Card>
         </CardGroup>
