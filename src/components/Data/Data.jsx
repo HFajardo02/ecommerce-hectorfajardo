@@ -40,3 +40,16 @@ let productos = [
         "precio": 200,
     },
   ];
+
+  export const getFetch = (id) =>{    
+    
+    return new Promise( (resolve, reject)=>{   
+        setTimeout(()=>{
+            if (id) {
+                resolve(productos.find(prod => prod.id === id))              
+            } else {
+                resolve(productos)          
+            }
+        },2000)            
+    })
+}  
