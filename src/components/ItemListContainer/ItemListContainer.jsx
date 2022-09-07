@@ -10,7 +10,7 @@ const ItemListContainer = () => {
     
     
     useEffect(()=>{
-        getFetch ()// llamada a la api
+        getFetch () // llamada a la api
         .then((resp)=> {
                 setProductos(resp)
                 setLoading(false)
@@ -23,20 +23,17 @@ const ItemListContainer = () => {
 
     return (
         <div>
-            { loading ? 
-                <h1>Cargando...</h1>            
-            :
-                productos.map(prod => <div            
-                                                className='col-md-4 p-1'    
-                                                key={prod.id}                                            
-                                            >                        
-                                                
+            { loading ? <h1>Cargando...</h1> : productos.map(prod => 
+                                                <div 
+                                                    className='col-md-4 p-1'    
+                                                    key={prod.id}                                            
+                                                >                        
                                                 <div className="card w-100 mt-5" >
-                                                    <div className="card-header">
-                                                        {`${prod.nombre} - ${prod.descripcion}`}
+                                                <div className="card-header">
+                                                        {`${prod.model} - ${prod.series}`}
                                                     </div>
                                                     <div className="card-body">
-                                                        {/* <img src={prod.foto} alt='' className='w-50' /> */}
+                                                        {<img src={prod.photo_url} alt='' className='w-50' />}
                                                         {prod.stock}                                                            
                                                     </div>
                                                     <div className="card-footer">  
