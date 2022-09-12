@@ -37,7 +37,7 @@ const ItemListContainer = () => {
                             <br />
                             Serie: {prod.series}
                             <br />
-                            Año: ${prod.year}
+                            Año: {prod.year}
                             <br />
                             Stock Disponible: {prod.stock} unidades
                             <br />

@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         getFetch ()
-            .then((resp) => setProducto(resp))
+            .then((resp) => setProducto(resp[3])) //Se inserta el valor "3" del arreglo con el fin de mostrar un solo producto
             .catch(err => console.log(err))            
     }, [])
 
