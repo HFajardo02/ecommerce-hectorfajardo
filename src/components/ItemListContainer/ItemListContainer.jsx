@@ -44,7 +44,7 @@ const ItemListContainer = () => {
                             Precio: ${prod.precio} MXN
                             <br />
                             <br />
-                            <button className="btn btn-outline-primary btn-block">
+                            <button className="btn btn-outline-primary btn-block" onClick={()=>console.log('Ver Detalle del Producto')}>
                                 Detalle del producto
                             </button>                
                         </div>

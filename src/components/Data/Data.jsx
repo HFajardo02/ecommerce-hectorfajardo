@@ -39,11 +39,11 @@ let productos = [
         "stock": 8,
         "precio": 200,
     },
-  ];
+];
 
-  export const getFetch = (id) =>{    
+export const getFetch = (id) =>{    
     
-    return new Promise( (resolve, reject)=>{   
+    return new Promise( (resolve)=>{   
         setTimeout(()=>{
             if (id) {
                 resolve(productos.find(prod => prod.id === id))              
@@ -52,4 +52,4 @@ let productos = [
             }
         },2000)            
     })
-}  
+}
