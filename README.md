@@ -16,15 +16,16 @@
 12.- 'bootstrap/dist/css/bootstrap.min.css';\
 13.- { BrowserRouter as Rutas, Routes, Route, Navigate } from 'react-router-dom';\
 
-.
-.
-.
-.
-.
-.
-.
-.
-.
+.\
+.\
+.\
+.\
+.\
+.\
+.\
+.\
+.\
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
