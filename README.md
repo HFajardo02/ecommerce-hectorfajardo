@@ -1,4 +1,6 @@
-#Este proyecto esta creado con el fin de desarrollar un comercio electrónico basado en React JS
+# Este proyecto esta creado con el fin de desarrollar un comercio electrónico basado en React JS.
+
+
 
 
 # Getting Started with Create React App
