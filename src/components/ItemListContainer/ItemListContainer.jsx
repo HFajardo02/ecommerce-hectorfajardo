@@ -1,61 +1,110 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+
+import ItemList from "../../components/ItemList/ItemList";
 import { getFetch } from "../Data/Data";
 
 
-
 const ItemListContainer = () => {
-    
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
     
-    
-    useEffect(()=>{
-        getFetch () // llamada a la api
-        .then((resp)=> {
-                setProductos(resp)
-                setLoading(false)
-        })
-        .catch(err => console.log(err))
-        // .finally(()=> )
-    }, [])
+    const { categoriaId } = useParams()
 
-    console.log(productos)
+    console.log(categoriaId)
+   
+    useEffect(()=>{
+        if (categoriaId) {
+            getFetch ()// llamada a la api
+            .then((resp)=> {
+                    setProductos(resp.filter(productos => productos.categoria === categoriaId ))
+                    setLoading(false)
+            })
+            .catch(err => console.log(err))           
+        } else {
+            getFetch()// llamada a la api
+            .then( (resp)=> setProductos(resp) )
+            .catch(err => console.log(err)) 
+            .finally(()=> setLoading(false))           
+        }
+        
+    }, [categoriaId])
+
 
     return (
         <div>
-            { loading ? <div className="text-center"><h3><br />Cargando productos...</h3></div> : productos.map(prod => 
-                <div className='col-md-4 p-1' key={prod.id} >                        
-                    <div className="card w-100 mt-5" >
-                        <div className="card-header text-center">
-                        <h4>Nombre: {`${prod.model}`}</h4>
-                        </div>
-                        <div className="card-body text-center">
-                            {<img src={prod.photo_url} alt='' className='w-50' />}                                                 
-                        </div>
-                        <div className="card-footer h5 text-center">
-                            Categoría: {prod.categoria}
-                            <br />
-                            Serie: {prod.series}
-                            <br />
-                            Año: {prod.year}
-                            <br />
-                            Stock Disponible: {prod.stock} unidades
-                            <br />
-                            Precio: ${prod.precio} MXN
-                            <br />
-                            <br />
-                            <button className="btn btn-outline-primary btn-block" onClick={()=>console.log('Ver Detalle del Producto')}>
-                                Detalle del producto
-                            </button>                
-                        </div>
-                    </div>                                                                                
-                </div>
-            ) }
+            { loading ? 
+                <div className="text-center"><h1><br />Cargando productos...</h1></div>            
+            :   
+                <div className="container">
+                      <ItemList productos={productos} />                   
+                </div>             
+            }
         </div>
     )
 }
 
 export default ItemListContainer
+
+// import { useEffect, useState } from "react";
+// import { getFetch } from "../Data/Data";
+
+
+
+// const ItemListContainer = () => {
+    
+//     const [productos, setProductos] = useState([])
+//     const [loading, setLoading] = useState(true)
+    
+    
+//     useEffect(()=>{
+//         getFetch () // llamada a la api
+//         .then((resp)=> {
+//                 setProductos(resp)
+//                 setLoading(false)
+//         })
+//         .catch(err => console.log(err))
+//         // .finally(()=> )
+//     }, [])
+
+//     console.log(productos)
+
+//     return (
+//         <div>
+//             { loading ? <div className="text-center"><h3><br />Cargando productos...</h3></div> : productos.map(prod => 
+//                 <div className='col-md-4 p-1' key={prod.id} >                        
+//                     <div className="card w-100 mt-5" >
+//                         <div className="card-header text-center">
+//                         <h4>Nombre: {`${prod.model}`}</h4>
+//                         </div>
+//                         <div className="card-body text-center">
+//                             {<img src={prod.photo_url} alt='' className='w-50' />}                                                 
+//                         </div>
+//                         <div className="card-footer h5 text-center">
+//                             Categoría: {prod.categoria}
+//                             <br />
+//                             Serie: {prod.series}
+//                             <br />
+//                             Año: {prod.year}
+//                             <br />
+//                             Stock Disponible: {prod.stock} unidades
+//                             <br />
+//                             Precio: ${prod.precio} MXN
+//                             <br />
+//                             <br />
+//                             <button className="btn btn-outline-primary btn-block" onClick={()=>console.log('Ver Detalle del Producto')}>
+//                                 Detalle del producto
+//                             </button>                
+//                         </div>
+//                     </div>                                                                                
+//                 </div>
+//             ) }
+//         </div>
+//     )
+// }
+
+// export default ItemListContainer
 
 
 

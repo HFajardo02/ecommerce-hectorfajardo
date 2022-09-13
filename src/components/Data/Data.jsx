@@ -1,6 +1,6 @@
 let productos = [
     {
-        "id": "1",
+        "id":1,
         "categoria": "Autos",
         "model": "67 Shelby GT500",
         "series": "2020 New Models",
@@ -10,7 +10,7 @@ let productos = [
         "precio": 100,
     },
     {
-        "id": "2",
+        "id":2,
         "categoria": "Trucks",
         "model": "Tooligan",
         "series": "2000 Great Models",
@@ -20,7 +20,7 @@ let productos = [
         "precio": 75,
     },
     {
-        "id":"3",
+        "id":3,
         "categoria": "Clasicos",
         "model": "67 Pontiac Firebird 400",
         "series": "1900 Clasic Models",
@@ -30,7 +30,7 @@ let productos = [
         "precio": 150,
     },
     {
-        "id":"4",
+        "id":4,
         "categoria": "Super Mario Bros",
         "model": "Super Mario 400",
         "series": "Mario Bros 2020",
