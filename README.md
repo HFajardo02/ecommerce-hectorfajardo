@@ -1,4 +1,32 @@
-# Getting Started with Create React App
+# Este proyecto esta creado con el fin de desarrollar un comercio electrónico basado en React JS.
+
+# Librerias utilizadas en este proyecto!!!
+
+1.- Container from 'react-bootstrap/Container';\
+3.- { Link } from 'react-router-dom';\
+3.- { NavLink } from 'react-router-dom';\
+4.- Nav from 'react-bootstrap/Nav';\
+5.- { useEffect } from "react";\
+6.- { useState } from "react";\
+7.- { useParams } from "react-router-dom";\
+8.- Card from 'react-bootstrap/Card';\
+9.- CardGroup from 'react-bootstrap/CardGroup';\
+10.- Row from 'react-bootstrap/Row';\
+11.- Col from 'react-bootstrap/Col';\
+12.- 'bootstrap/dist/css/bootstrap.min.css';\
+13.- { BrowserRouter as Rutas, Routes, Route, Navigate } from 'react-router-dom';\
+
+.\
+.\
+.\
+.\
+.\
+.\
+.\
+.\
+.\
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
