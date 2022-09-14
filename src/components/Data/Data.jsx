@@ -39,6 +39,46 @@ let productos = [
         "stock": 8,
         "precio": 200,
     },
+    {
+        "id":5,
+        "categoria": "Super Mario Bros",
+        "model": "Super Luigi 400",
+        "series": "Mario Bros 2020",
+        "photo_url": "https://http2.mlstatic.com/D_NQ_NP_890024-MLC41109434514_032020-O.jpg",
+        "year": 2020,
+        "stock": 12,
+        "precio": 200,
+    },
+    {
+        "id":6,
+        "categoria": "Autos",
+        "model": "'16 Bugatti Chiron",
+        "series": "HW Exotics",
+        "photo_url": "https://www.elsoldemexico.com.mx/deportes/automotriz/jsjlnh-bugatti-chiron.png/alternates/FREE_720/BUGATTI%20CHIRON.png",
+        "year": 2019,
+        "stock": 5,
+        "precio": 400,
+    },
+    {
+        "id":7,
+        "categoria": "Trucks",
+        "model": "Circle Trucker",
+        "series": "2011 New Models",
+        "photo_url": "https://www.ethanproductions.com/hotwheels-newDB/images/nocode20160422211530635-back.jpg",
+        "year": 2011,
+        "stock": 2,
+        "precio": 10,
+    },
+    {
+        "id":8,
+        "categoria": "Clasicos",
+        "model": "'35 Classic Caddy",
+        "series": "Mainline",
+        "photo_url": "https://hwcollectorsnews.com/wp-content/uploads/2018/12/35-Classic-Caddy-w.jpg",
+        "year": 1982,
+        "stock": 3,
+        "precio": 350,
+    },
 ];
 
 export const getFetch = (id) =>{    
@@ -46,7 +86,7 @@ export const getFetch = (id) =>{
     return new Promise( (resolve)=>{   
         setTimeout(()=>{
             if (id) {
-                resolve(productos.find(prod => prod.id === id))              
+                resolve(productos.find(prod => prod.id === Number(id)))              
             } else {
                 resolve(productos)          
             }
