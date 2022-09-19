@@ -17,7 +17,7 @@ const Item = ({prod}) => {
                     <br />
                     {`Año: ${prod.year}`}
                     <br />
-                    {`Stock: ${prod.stock} unidades`}
+                    {`Stock Disponible: ${prod.stock} unidades`}
                     <br />
                     {`Precio: $${prod.precio} MXN`}
                     <br />

@@ -16,7 +16,6 @@ import { useState } from 'react'
             console.log ("Artículos seleccionados: ", {count})
         }
 
-
         return(
             <div>
                 <button disabled={ count <1 } onClick={onSubtract}><h2>-</h2></button>
@@ -24,7 +23,7 @@ import { useState } from 'react'
                 <button disabled={ count >= stock } onClick={onAdd}><h2>+</h2></button>
                 <br />
                 <br />
-                <button disabled={count<=0} onClick={verCarrito}>Agregar al carrito</button>
+                <button disabled={count<=0} onClick={() => {verCarrito(count)}}>Agregar al carrito</button>
             </div>
         )
     }
