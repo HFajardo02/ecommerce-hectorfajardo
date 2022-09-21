@@ -22,36 +22,6 @@ const Cart = () => {
     return (
         <div className="container mt-5">
 
-            {/* Comienza tabla */}      
-             
-            
-            {/* <Table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        {cart.map(item => (
-                        <>
-                            <td key={item.id}><img src={item.photo_url} className='w-25 center-text' alt="ilustracion"/></td>
-                            <td key={item.id}>{item.model}</td>
-                            <td key={item.id}>${item.precio} MXN</td>
-                            <td key={item.id}>{item.cantidad} Pzs</td>
-                            <td key={item.id}>{item.precio}*{item.cantidad} </td>
-                        </>
-                        ))} 
-                    </tr>
-                </tbody>
-            </Table> */}
-            
-            {/* Finaliza tabla */}
-
             <ul>
                 {
                     cart.map(item => <li key={item.id}>
