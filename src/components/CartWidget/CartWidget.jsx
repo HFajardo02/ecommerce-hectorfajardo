@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 
 import hwlogo from './../../images/hwlogo.png';
 import iconcart from './../../images/iconcart.png';
+import { useCartContext } from '../contexts/cartContext';
 
 const CartWidget = () => {
+
+    const {totalProductos} = useCartContext();
+
     return (
         <Navbar bg="light" variant="dark" sticky='top'>
             <Container>
@@ -14,6 +18,7 @@ const CartWidget = () => {
                 </Link>
                 <Link to="/cart">
                     <img className="" src={iconcart} alt="Carrito de compra" width="100" height="100"/>
+                    <span>{totalProductos() || '0'} Items</span>
                 </Link>
             </Container>
         </Navbar>
