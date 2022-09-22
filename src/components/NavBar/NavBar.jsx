@@ -12,17 +12,15 @@ const NavBar = () => {
         
             <Navbar bg="dark" variant="dark">
 
-
                 <Container>
-                    <Nav >
-                        <NavLink to="categoria/Autos" >Autos</NavLink>
-                        <NavLink to="categoria/Trucks" >Trucks</NavLink>
-                        <NavLink to="categoria/Clasicos" >Clásicos</NavLink>
-                        <NavLink to="categoria/Super Mario Bros" >Super Mario Bros</NavLink>
+                    <Nav>
+                        <NavLink to="categoria/Autos" className="nav-item nav-link text-center" style={{color:"white"}}>Autos</NavLink>
+                        <NavLink to="categoria/Trucks" className="nav-item nav-link text-center" style={{color:"white"}}>Trucks</NavLink>
+                        <NavLink to="categoria/Clasicos" className="nav-item nav-link text-center" style={{color:"white"}}>Clásicos</NavLink>
+                        <NavLink to="categoria/Super Mario Bros" className="nav-item nav-link text-center" style={{color:"white"}}>Super Mario Bros</NavLink>
                     </Nav>
                 </Container>
 
-                
             </Navbar>
 
         </>
