@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Swal from 'sweetalert2'
 
     function ItemCount ({stock, initial, verCarrito}){
 
@@ -12,6 +13,14 @@ import { useState } from 'react'
         function onAdd(){
             setCount(count+1)
         }
+
+        const btnAlerta = () => {
+            Swal.fire ({
+                title:"Producto agregado al carrito",
+                icon: "success",
+                timer: "2000",
+            });
+        }
         
 
         return(
@@ -21,7 +30,7 @@ import { useState } from 'react'
                 <button disabled={ count >= stock } onClick={onAdd}><h2>+</h2></button>
                 <br />
                 <br />
-                <button className="btn btn-secondary" disabled={count<=0} onClick={() => {verCarrito(count)}}>Agregar al carrito</button>
+                <button className="btn btn-secondary" disabled={count<=0} onClick={() => {verCarrito(count); btnAlerta()}}>Agregar al carrito</button>
             </div>
         )
     }
