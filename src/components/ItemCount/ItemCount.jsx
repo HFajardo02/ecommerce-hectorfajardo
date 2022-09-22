@@ -30,7 +30,7 @@ import Swal from 'sweetalert2'
                 <button disabled={ count >= stock } onClick={onAdd}><h2>+</h2></button>
                 <br />
                 <br />
-                <button className="btn btn-secondary" disabled={count<=0} onClick={() => {verCarrito(count); btnAlerta()}}>Agregar al carrito</button>
+                <button className="btn btn-success" disabled={count<=0} onClick={() => {verCarrito(count); btnAlerta()}}>Agregar al carrito</button>
             </div>
         )
     }

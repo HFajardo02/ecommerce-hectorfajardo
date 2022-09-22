@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useCartContext } from "../contexts/cartContext"
-//import Table from 'react-bootstrap/Table';
+import { FcCancel } from "react-icons/fc";
+import Button from 'react-bootstrap/Button';
 
 
 const Cart = () => {
@@ -13,25 +14,28 @@ const Cart = () => {
                     <br />
                     <br />
                     <h2>No hay artículos en el carrito de compra...</h2>
-                    <h3>Vaya a la pagina de inicio</h3>
+                    <br />
+                    <Link to='/'>
+                        <button type="button" class="btn btn-primary"> Ir a la página de inicio </button>
+                    </Link>
                 </div>
             </>
         )
     }
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 text-left">
 
             <ul>
                 {
                     cart.map(item => <li key={item.id}>
-                        <div className="w-100">
-                            <img src={item.photo_url} className='w-25' alt="ilustracion"/>
+                        <div>
+                            <img src={item.photo_url} alt="ilustracion" style={{height:75, widht:75}}/>
                             <b>Nombre:</b> {item.model}   
                             <b>   Precio:</b> ${item.precio} MXN   
                             <b>   Cantidad:</b> {item.cantidad} Piezas  
-                            <b>   Subtotal:</b> ${item.precio * item.cantidad} MXN  
-                            <button className="offset-md-1" onClick={() => eliminarProducto(item.id)}>Eliminar</button> 
+                            <b>   Subtotal:</b> ${item.precio * item.cantidad} MXN     
+                            <Button variant="outline-danger" size="sm" className="m-3" onClick={() => eliminarProducto(item.id)}> <FcCancel/> Eliminar producto</Button> 
                         </div>
                     </li>  )
                 }
@@ -39,8 +43,7 @@ const Cart = () => {
             <div>
                 <br />
                 <br />
-                <h3 className="container text-center">TOTAL DEL CARRITO DE COMPRA: ${totalCarrito()} MXN</h3>
-                <br />
+                <h2 className="container text-center"><h5>TOTAL DEL CARRITO DE COMPRA:</h5> ${totalCarrito()} MXN</h2>
                 <br />
             </div>
             <div className="container mt-10 text-center">
