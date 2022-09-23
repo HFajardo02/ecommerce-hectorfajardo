@@ -21,6 +21,12 @@ const ItemDetail = ({producto}) => {
 
     console.log(cart)
 
+    //Se forza la espera para que carguen los productos
+    if (producto.id === undefined)
+    {
+        return <div className="text-center"><h1><br />Cargando productos...</h1></div>
+    }
+
     return(        
             <Row xs={1} md={2} lg={4} className="container mt-5 text-center">
                 <Col>

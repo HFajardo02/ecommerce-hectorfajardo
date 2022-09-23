@@ -43,7 +43,8 @@ const Cart = () => {
             <div>
                 <br />
                 <br />
-                <h2 className="container text-center"><h5>TOTAL DEL CARRITO DE COMPRA:</h5> ${totalCarrito()} MXN</h2>
+                <h5 className="container text-center">TOTAL DEL CARRITO DE COMPRA:</h5>
+                <h2 className="container text-center">${totalCarrito()} MXN</h2>
                 <br />
             </div>
             <div className="container mt-10 text-center">
