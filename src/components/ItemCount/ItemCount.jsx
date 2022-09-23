@@ -18,7 +18,7 @@ import Swal from 'sweetalert2'
             Swal.fire ({
                 title:"Producto agregado al carrito",
                 icon: "success",
-                timer: "2000",
+                timer: "1000",
             });
         }
         
