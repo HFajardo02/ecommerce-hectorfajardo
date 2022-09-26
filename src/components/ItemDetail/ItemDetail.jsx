@@ -2,19 +2,25 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+
 import ItemCount from '../ItemCount/ItemCount';
-import { Link } from 'react-router-dom';
 import { useCartContext } from '../../contexts/cartContext';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 
 const ItemDetail = ({producto}) => {
+
+    const [ addedToCart, setAddedToCart] = useState (false)
 
     const { cart, addToCart } = useCartContext ()
 
     const verCarrito = (count) => {
         console.log ("Número de Artículos Seleccionados: ", {count})
         addToCart( {...producto, cantidad: count} )
+        setAddedToCart(true)
     }
 
     console.log(cart)
@@ -44,12 +50,17 @@ const ItemDetail = ({producto}) => {
                                     <br />
                                     <b>Stock:</b> {producto.stock} unidades
                                 </Card.Text>
-                                <ItemCount initial={1} stock={producto.stock} verCarrito={verCarrito}/>
-                                    <Card.Text>
+                                <Card.Text>
+                                {
+                                    addedToCart
+                                    ?
                                         <Link to='/cart' >
-                                            <button className="btn btn-secondary mt-2" onClick={()=>console.log('Ver carrito') }>Ver carrito</button><br /><br />
+                                            <button className="btn btn-primary mt-2" onClick={()=>console.log('Ver carrito') }>Ver carrito</button><br /><br />
                                         </Link>
-                                    </Card.Text>
+                                    :
+                                        <ItemCount initial={1} stock={producto.stock} verCarrito={verCarrito}/>
+                                }
+                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </CardGroup>
