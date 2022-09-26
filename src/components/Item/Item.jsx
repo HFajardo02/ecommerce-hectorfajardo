@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Item = ({prod}) => {
     return (
-        <div className='col-md-4 p-1'>                    
+        <div className="col-md-4 p-1">                    
             <div className="card w-100 mt-5 text-center" >
                 <div className="card-header h3">
                     {`${prod.model}`}                                                           
