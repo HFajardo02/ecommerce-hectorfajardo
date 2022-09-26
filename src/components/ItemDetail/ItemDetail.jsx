@@ -2,17 +2,15 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-
 import ItemCount from '../ItemCount/ItemCount';
-import { useCartContext } from '../contexts/cartContext';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../contexts/cartContext';
 
 
 
 const ItemDetail = ({producto}) => {
 
-    const { cart, addToCart } = useCartContext()
+    const { cart, addToCart } = useCartContext ()
 
     const verCarrito = (count) => {
         console.log ("Número de Artículos Seleccionados: ", {count})

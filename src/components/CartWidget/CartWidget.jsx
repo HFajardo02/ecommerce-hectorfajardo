@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 
 import hwlogo from './../../images/hwlogo.png';
 import iconcart from './../../images/iconcart.png';
-import { useCartContext } from '../contexts/cartContext';
+import { useCartContext } from '../../contexts/cartContext';
+
 
 const CartWidget = () => {
 
-    const {totalProductos} = useCartContext();
+    const {totalProductos} = useCartContext ();
 
     return (
         <Navbar bg="light" variant="dark" sticky='top'>

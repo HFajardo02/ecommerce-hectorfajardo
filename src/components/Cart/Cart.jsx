@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
-import { useCartContext } from "../contexts/cartContext"
 import { FcCancel } from "react-icons/fc";
 import Button from 'react-bootstrap/Button';
+import { useCartContext } from "../../contexts/cartContext";
+
 
 
 const Cart = () => {
