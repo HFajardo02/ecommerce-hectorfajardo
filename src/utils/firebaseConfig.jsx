@@ -1,16 +1,68 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc, getDoc, query, where, collection, getDocs } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDJz6UACTLMINHYTPGYjw3j-3SagEWjtdY",
-  authDomain: "ecommerce-hectorfajardo.firebaseapp.com",
-  projectId: "ecommerce-hectorfajardo",
-  storageBucket: "ecommerce-hectorfajardo.appspot.com",
-  messagingSenderId: "116736060659",
-  appId: "1:116736060659:web:dbcc9c1932196e6ed8db86"
+	apiKey: "AIzaSyDJz6UACTLMINHYTPGYjw3j-3SagEWjtdY",
+	authDomain: "ecommerce-hectorfajardo.firebaseapp.com",
+	projectId: "ecommerce-hectorfajardo",
+	storageBucket: "ecommerce-hectorfajardo.appspot.com",
+	messagingSenderId: "116736060659",
+	appId: "1:116736060659:web:dbcc9c1932196e6ed8db86"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
+const firestoreDB = getFirestore(app);
+
+export default firestoreDB;
+
+export async function getAllItems(){
+
+	const miColeccion = collection (firestoreDB, "productos");
+
+	const productSnap = await getDocs(miColeccion);
+
+	return productSnap.docs.map(doc => {
+		return {
+			...doc.data(),
+			id: doc.id
+		}
+	});
+}
+
+export async function getItemsByCategory (categoriaId) {
+
+	const miColeccion = collection (firestoreDB, "productos");
+
+	const queryProducts = query (miColeccion, where("categoria", "==", categoriaId));
+
+	const productSnap = await getDocs(queryProducts);
+
+	return productSnap.docs.map(doc => {
+		return {
+			...doc.data(),
+			id: doc.id
+		}
+	});
+
+}
+
+export async function getItem (id){
+
+	const miColeccion = collection (firestoreDB, "productos");
+
+	const productRef = doc(miColeccion, id);
+
+	const productSnap = await getDoc(productRef);
+
+	return{
+		...productSnap.data(),
+		id: productSnap
+	}
+
+}
+
+
+
+
