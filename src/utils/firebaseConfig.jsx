@@ -17,6 +17,8 @@ const firestoreDB = getFirestore(app);
 
 export default firestoreDB;
 
+
+//Llamada a todos los productos
 export async function getAllItems(){
 
 	const miColeccion = collection (firestoreDB, "productos");
@@ -31,6 +33,8 @@ export async function getAllItems(){
 	});
 }
 
+
+//LLamada por categoria
 export async function getItemsByCategory (categoriaId) {
 
 	const miColeccion = collection (firestoreDB, "productos");
@@ -48,6 +52,8 @@ export async function getItemsByCategory (categoriaId) {
 
 }
 
+
+//Llamada solo por producto
 export async function getItem (id){
 
 	const miColeccion = collection (firestoreDB, "productos");
@@ -62,7 +68,3 @@ export async function getItem (id){
 	}
 
 }
-
-
-
-
