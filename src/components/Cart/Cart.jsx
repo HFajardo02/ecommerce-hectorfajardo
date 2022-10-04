@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { FcCancel } from "react-icons/fc";
 import Button from 'react-bootstrap/Button';
 import { useCartContext } from "../../contexts/cartContext";
-
+import { createOrdenes } from "../../utils/firebaseConfig";
 
 
 const Cart = () => {
@@ -26,6 +26,8 @@ const Cart = () => {
         }
 
         console.log(buyOrder)
+
+        createOrdenes(buyOrder);
     }
     
 

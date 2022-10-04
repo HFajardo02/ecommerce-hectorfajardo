@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc, query, where, collection, getDocs } from "firebase/firestore";
+import { getFirestore, doc, getDoc, query, where, collection, getDocs, Timestamp, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyDJz6UACTLMINHYTPGYjw3j-3SagEWjtdY",
@@ -71,4 +71,19 @@ export async function getItem (id){
 
 
 //Insertar orden a Firebase
-//export 
+export async function createOrdenes(orderData){
+
+	const buyTimestamp = Timestamp.now();
+
+	const orderWithDate = {
+		...orderData,
+		date: buyTimestamp
+	};
+
+	const miColeccion = collection(firestoreDB, "ordenes");
+
+	const orderDoc = await addDoc (miColeccion, orderWithDate);
+	
+	console.log("Orden lista: ", orderDoc.id);
+
+}
