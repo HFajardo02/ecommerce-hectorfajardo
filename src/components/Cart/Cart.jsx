@@ -6,7 +6,29 @@ import { useCartContext } from "../../contexts/cartContext";
 
 
 const Cart = () => {
-    const { cart, vaciarCarrito, eliminarProducto, totalCarrito} = useCartContext ()
+    
+    const { cart, vaciarCarrito, eliminarProducto, totalCarrito} = useCartContext ();
+
+    function handleBuy(){
+        
+        const buyOrder = {
+        
+            buyer: {
+                nombre: "Hector Fajardo",
+                telefono: "+52 1234567890",
+                mail: "prueba@gmail.com",
+            },
+    
+            items: [...cart],
+            date: new Date(),
+            total: totalCarrito()
+    
+        }
+
+        console.log(buyOrder)
+    }
+    
+
 
     if (cart.length === 0) {
         return (
@@ -32,7 +54,7 @@ const Cart = () => {
                     cart.map(item => <li key={item.id}>
                         <div>
                             <img src={item.photo_url} alt="ilustracion" style={{height:75, widht:75}}/>
-                            <b>Nombre:</b> {item.model}   
+                            <b>   Nombre:</b> {item.model}   
                             <b>   Precio:</b> ${item.precio} MXN   
                             <b>   Cantidad:</b> {item.cantidad} Piezas  
                             <b>   Subtotal:</b> ${item.precio * item.cantidad} MXN     
@@ -53,7 +75,7 @@ const Cart = () => {
                     <button className="btn btn-warning offset-md-1" onClick={() => console.log('Ir al Inicio') }>Seguir comprando</button>
                 </Link>
                 <button className="btn btn-danger offset-md-1" onClick={vaciarCarrito}>Vaciar Carrito</button>
-                <button className="btn btn-dark offset-md-1">Finalizar Compra</button>
+                <button onClick={handleBuy} className="btn btn-dark offset-md-1">Finalizar Compra</button>
             </div>
         </div>
     )

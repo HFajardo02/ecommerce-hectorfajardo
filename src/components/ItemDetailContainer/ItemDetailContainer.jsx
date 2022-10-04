@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { getItem as getFetch} from "../../utils/firebaseConfig";
 import { useParams } from "react-router-dom";
 import ItemDetail from '../ItemDetail/ItemDetail';
+import { getItem as getFetch} from "../../utils/firebaseConfig";
 
 const ItemDetailContainer = () => {
 

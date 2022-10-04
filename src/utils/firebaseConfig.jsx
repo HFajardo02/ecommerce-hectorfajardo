@@ -64,7 +64,11 @@ export async function getItem (id){
 
 	return{
 		...productSnap.data(),
-		id: productSnap
-	}
+		id: productSnap.id
+	};
 
 }
+
+
+//Insertar orden a Firebase
+//export 
