@@ -84,6 +84,6 @@ export async function createOrdenes(orderData){
 
 	const orderDoc = await addDoc (miColeccion, orderWithDate);
 	
-	console.log("Orden lista: ", orderDoc.id);
+	console.log("Orden creada con el ID: ", orderDoc.id);
 
 }

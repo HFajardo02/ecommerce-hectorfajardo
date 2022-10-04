@@ -10,6 +10,15 @@ const Cart = () => {
     const { cart, vaciarCarrito, eliminarProducto, totalCarrito} = useCartContext ();
 
     function handleBuy(){
+
+        const itemsToShow = cart.map((item) => ({
+            ID: item.id,
+            Nombre: item.model,   
+            Precio: item.precio,   
+            Cantidad: item.cantidad,   
+            }
+        ))
+
         
         const buyOrder = {
         
@@ -19,7 +28,7 @@ const Cart = () => {
                 mail: "prueba@gmail.com",
             },
     
-            items: [...cart],
+            items: itemsToShow,
             date: new Date(),
             total: totalCarrito()
     
@@ -28,6 +37,10 @@ const Cart = () => {
         console.log(buyOrder)
 
         createOrdenes(buyOrder);
+
+        vaciarCarrito();
+
+
     }
     
 
