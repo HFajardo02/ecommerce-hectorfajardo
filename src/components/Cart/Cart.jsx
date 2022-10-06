@@ -54,7 +54,7 @@ const Cart = () => {
                     <h2>No hay artículos en el carrito de compra...</h2>
                     <br />
                     <Link to='/'>
-                        <button type="button" class="btn btn-primary"> Ir a la página de inicio </button>
+                        <button type="button" className="btn btn-primary"> Ir a la página de inicio </button>
                     </Link>
                 </div>
             </>

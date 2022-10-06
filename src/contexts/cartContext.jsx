@@ -53,7 +53,7 @@ export const CartContextProvider = ({children}) => {
 
 
     const totalProductos = () => {
-        cart.reduce((productosInicial, productosFinal) => productosInicial + productosFinal.cantidad, 0);
+        return cart.reduce((productosInicial, productosFinal) => productosInicial + productosFinal.cantidad, 0);
     }
 
 
