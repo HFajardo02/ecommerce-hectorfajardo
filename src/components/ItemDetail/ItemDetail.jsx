@@ -18,12 +18,10 @@ const ItemDetail = ({producto}) => {
     const { cart, addToCart } = useCartContext ()
 
     const verCarrito = (count) => {
-        console.log ("Número de Artículos Seleccionados: ", {count})
         addToCart( {...producto, cantidad: count} )
         setAddedToCart(true)
     }
 
-    console.log(cart)
 
     //Se forza la espera para que carguen los productos
     if (producto.id === undefined)
@@ -55,7 +53,7 @@ const ItemDetail = ({producto}) => {
                                     addedToCart
                                     ?
                                         <Link to='/cart' >
-                                            <button className="btn btn-primary mt-2" onClick={()=>console.log('Ver carrito') }>Ver carrito</button><br /><br />
+                                            <button className="btn btn-primary mt-2">Ver carrito</button><br /><br />
                                         </Link>
                                     :
                                         <ItemCount initial={1} stock={producto.stock} verCarrito={verCarrito}/>

@@ -34,12 +34,9 @@ const Cart = () => {
     
         }
 
-        console.log(buyOrder)
-
         createOrdenes(buyOrder);
 
         vaciarCarrito();
-
 
     }
     
@@ -87,7 +84,7 @@ const Cart = () => {
             </div>
             <div className="container mt-10 text-center">
                 <Link to='/' >
-                    <button className="btn btn-warning offset-md-1" onClick={() => console.log('Ir al Inicio') }>Seguir comprando</button>
+                    <button className="btn btn-warning offset-md-1">Seguir comprando</button>
                 </Link>
                 <button className="btn btn-danger offset-md-1" onClick={vaciarCarrito}>Vaciar Carrito</button>
                 <button onClick={handleBuy} className="btn btn-dark offset-md-1">Finalizar Compra</button>
