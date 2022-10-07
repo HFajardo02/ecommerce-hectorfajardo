@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import { useCartContext } from "../../contexts/cartContext";
 import { createOrdenes } from "../../utils/firebaseConfig";
 
-
 const Cart = () => {
     
     const { cart, vaciarCarrito, eliminarProducto, totalCarrito} = useCartContext ();
@@ -34,6 +33,8 @@ const Cart = () => {
     
         }
 
+        console.log (buyOrder);
+
         createOrdenes(buyOrder);
 
         vaciarCarrito();
@@ -57,6 +58,7 @@ const Cart = () => {
             </>
         )
     }
+
 
     return (
         <div className="container mt-5 text-left">

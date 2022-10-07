@@ -19,7 +19,7 @@ const CartWidget = () => {
                 </Link>
                 <Link to="/cart">
                     <img className="" src={iconcart} alt="Carrito de compra" width="100" height="100"/>
-                    <span>{totalProductos() || '0'} Items</span>
+                    <span style={{fontSize: '2em', color: 'red'}}>{totalProductos() || ''}</span>
                 </Link>
             </Container>
         </Navbar>

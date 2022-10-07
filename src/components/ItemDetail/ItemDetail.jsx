@@ -10,12 +10,11 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
-
 const ItemDetail = ({producto}) => {
 
     const [ addedToCart, setAddedToCart] = useState (false)
 
-    const { cart, addToCart } = useCartContext ()
+    const { addToCart } = useCartContext ()
 
     const verCarrito = (count) => {
         addToCart( {...producto, cantidad: count} )
