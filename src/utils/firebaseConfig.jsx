@@ -85,5 +85,21 @@ export async function createOrdenes(orderData){
 	const orderDoc = await addDoc (miColeccion, orderWithDate);
 	
 	console.log("Orden creada con el ID: ", orderDoc.id);
+}
+
+
+//Llamada por orden
+export async function getOrderId (id){
+
+	const miColeccion = collection (firestoreDB, "ordenes");
+
+	const orderRef = doc(miColeccion, id);
+
+	const orderSnap = await getDoc(orderRef);
+
+	return{
+		...orderSnap.data(),
+		id: orderSnap.id
+	};
 
 }

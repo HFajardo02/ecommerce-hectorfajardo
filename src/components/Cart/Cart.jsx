@@ -12,9 +12,10 @@ const Cart = () => {
 
         const itemsToShow = cart.map((item) => ({
             ID: item.id,
-            Nombre: item.model,   
+            Modelo: item.model,   
             Precio: item.precio,   
-            Cantidad: item.cantidad,   
+            Cantidad: item.cantidad,
+            Subtotal: item.precio * item.cantidad,   
             }
         ))
 
@@ -59,7 +60,6 @@ const Cart = () => {
         )
     }
 
-
     return (
         <div className="container mt-5 text-left">
 
@@ -89,7 +89,9 @@ const Cart = () => {
                     <button className="btn btn-warning offset-md-1">Seguir comprando</button>
                 </Link>
                 <button className="btn btn-danger offset-md-1" onClick={vaciarCarrito}>Vaciar Carrito</button>
-                <button onClick={handleBuy} className="btn btn-dark offset-md-1">Finalizar Compra</button>
+                <Link to='/orders'>
+                    <button onClick={handleBuy} className="btn btn-dark offset-md-1">Finalizar Compra</button>
+                </Link>
             </div>
         </div>
     )

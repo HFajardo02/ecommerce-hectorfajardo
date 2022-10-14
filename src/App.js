@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter as Rutas, Routes, Route, Navigate } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import { CartContextProvider } from './contexts/cartContext';
+import Orders from './components/Orders/Orders';
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
                         <Route path='/cart' element={<Cart />} />
 
                         <Route path='*' element={<Navigate to='/' /> } />
+
+                        <Route path='/orders' element={<Orders />} />
 
                     </Routes>
                 </Rutas>

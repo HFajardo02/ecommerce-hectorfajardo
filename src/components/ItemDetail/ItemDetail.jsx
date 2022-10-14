@@ -28,8 +28,8 @@ const ItemDetail = ({producto}) => {
         return <div className="text-center"><h1><br />Cargando productos...</h1></div>
     }
 
-    return(        
-            <Row xs={1} md={2} lg={4} className="container mt-5 text-center">
+    return (
+            <Row className="container mt-5 text-center" xs={1} md={2} lg={4}>
                 <Col>
                     <CardGroup>
                         <Card>
