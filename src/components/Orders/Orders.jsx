@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom"
 
-const Orders = () => {
+const Orders = ({orden}) => {
+
+    console.log("Orden", orden);
+
+
     return (
         <>
 
@@ -9,7 +13,7 @@ const Orders = () => {
             
                 <h4 className="my-5">A continuación los detalles de tu pedido: </h4>
 
-                <h5 className="col-12">Número de orden: <span>Numero de orden</span></h5>
+                <h5 className="col-12">Número de orden: <span>Orden</span></h5>
                 <h5 className="col-12">Fecha del pedido: <span>Fecha</span></h5>
 
                 
