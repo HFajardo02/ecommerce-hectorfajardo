@@ -31,4 +31,4 @@ Al final del proeceso veremos un boton de "Finalizar compra" que al darle clic s
 13.- { BrowserRouter as Rutas, Routes, Route, Navigate } from 'react-router-dom';\
 
 ## VIDEO
-Hacer clic [AQUI] para ver un video demostrativo de la ejecución de la aplicacion y el proceso de compra (https://www.youtube.com/watch?v=6-zm3eOkLoc).
+Hacer clic en el enlace para ver el video demostrativo de la ejecución de la aplicacion y el proceso de compra (https://drive.google.com/drive/folders/1PFGV53Lo7NzKsS8qweJAZEj3fzIKLeE_?usp=sharing).

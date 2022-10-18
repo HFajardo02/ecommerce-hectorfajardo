@@ -2,8 +2,9 @@ import { Link } from "react-router-dom"
 import { FcCancel } from "react-icons/fc";
 import Button from 'react-bootstrap/Button';
 import { useCartContext } from "../../contexts/cartContext";
-import { createOrdenes } from "../../utils/firebaseConfig";
-import Swal from 'sweetalert2'
+import firestoreDB, { createOrdenes } from "../../utils/firebaseConfig";
+import {doc, increment, updateDoc } from "firebase/firestore";
+import Swal from 'sweetalert2';
 
 const Cart = () => {
     
@@ -12,7 +13,7 @@ const Cart = () => {
     function handleBuy(){
 
         const itemsToShow = cart.map((item) => ({
-            ID: item.id,
+            id: item.id,
             Modelo: item.model,   
             Precio: item.precio,   
             Cantidad: item.cantidad,
@@ -55,7 +56,17 @@ const Cart = () => {
                 allowOutsideClick: false,
             })
 
+            itemsToShow.map(async (item) => {
+                const itemRef = doc(firestoreDB, "productos", item.id );
+                await updateDoc (itemRef, {
+                    stock: increment (-item.Cantidad)
+                }); 
+                
+            })
+
         vaciarCarrito();
+
+        
     }
     
 
