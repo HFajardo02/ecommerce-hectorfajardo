@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, getDoc, query, where, collection, getDocs, Timestamp, addDoc } from "firebase/firestore";
 
+
 const firebaseConfig = {
 	apiKey: "AIzaSyDJz6UACTLMINHYTPGYjw3j-3SagEWjtdY",
 	authDomain: "ecommerce-hectorfajardo.firebaseapp.com",
@@ -85,6 +86,7 @@ export async function createOrdenes(orderData){
 	const orderDoc = await addDoc (miColeccion, orderWithDate);
 	
 	console.log("Orden creada con el ID: ", orderDoc.id);
+
 }
 
 

@@ -3,6 +3,7 @@ import { FcCancel } from "react-icons/fc";
 import Button from 'react-bootstrap/Button';
 import { useCartContext } from "../../contexts/cartContext";
 import { createOrdenes } from "../../utils/firebaseConfig";
+import Swal from 'sweetalert2'
 
 const Cart = () => {
     
@@ -34,12 +35,28 @@ const Cart = () => {
     
         }
 
-        console.log (buyOrder);
+        console.log(buyOrder);
 
-        createOrdenes(buyOrder);
+        createOrdenes(buyOrder)
+
+            Swal.fire ({
+                icon: 'success',
+                title: `Compra realizada con éxito!!!`,
+                html: `Datos del comprador...
+                    </br>
+                    Nombre:${buyOrder.buyer.nombre}
+                    </br>
+                    Telefono: ${buyOrder.buyer.telefono}
+                    </br>
+                    E-mail:${buyOrder.buyer.mail}
+                    </br>
+                    Fecha:${buyOrder.date}
+                    </br>
+                    Total de la compra:$${buyOrder.total} MXN
+                    </br>`,
+            })
 
         vaciarCarrito();
-
     }
     
 
