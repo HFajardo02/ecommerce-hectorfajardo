@@ -56,6 +56,15 @@ const Cart = () => {
                     </br>`,
             })
 
+        Swal.fire ({
+            title:"Gracias por tu compra...",
+            text:"Datos del comprador",
+            icon: "success",
+            timer: "1000",
+        });
+
+
+
         vaciarCarrito();
     }
     

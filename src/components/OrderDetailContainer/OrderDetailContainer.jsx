@@ -18,7 +18,6 @@ const OrderDetailContainer = () => {
     console.log (orden);
 
     return <Orders orden={orden}/>
-    
 }
 
 export default OrderDetailContainer
