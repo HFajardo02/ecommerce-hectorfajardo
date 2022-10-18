@@ -32,3 +32,9 @@ Al final del proeceso veremos un boton de "Finalizar compra" que al darle clic s
 
 ## VIDEO
 Hacer clic en el enlace para ver el video demostrativo de la ejecución de la aplicacion y el proceso de compra (https://drive.google.com/drive/folders/1PFGV53Lo7NzKsS8qweJAZEj3fzIKLeE_?usp=sharing).
+
+## Autor
+
+Héctor Fajardo.
+Puebla, Mex.
+Octubre 2022
