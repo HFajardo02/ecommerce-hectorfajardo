@@ -14,7 +14,7 @@ export const CartContextProvider = ({children}) => {
 
         if (isInCart(item))
         {
-            const product = cart.find (p => p.id === item.id);
+            const product = cart.find (pro => pro.id === item.id);
             const newArray = cart.filter(producto => producto.id !== item.id);
             product.cantidad += item.cantidad;
             setCart([

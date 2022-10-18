@@ -35,8 +35,6 @@ const Cart = () => {
     
         }
 
-        console.log(buyOrder);
-
         createOrdenes(buyOrder)
 
             Swal.fire ({
@@ -54,6 +52,7 @@ const Cart = () => {
                     </br>
                     Total de la compra: $${buyOrder.total} MXN
                     </br>`,
+                allowOutsideClick: false,
             })
 
         vaciarCarrito();
