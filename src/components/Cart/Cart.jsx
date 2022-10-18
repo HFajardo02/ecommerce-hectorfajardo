@@ -44,26 +44,17 @@ const Cart = () => {
                 title: `Compra realizada con éxito!!!`,
                 html: `Datos del comprador...
                     </br>
-                    Nombre:${buyOrder.buyer.nombre}
+                    Nombre: ${buyOrder.buyer.nombre}
                     </br>
                     Telefono: ${buyOrder.buyer.telefono}
                     </br>
-                    E-mail:${buyOrder.buyer.mail}
+                    E-mail: ${buyOrder.buyer.mail}
                     </br>
-                    Fecha:${buyOrder.date}
+                    Fecha: ${buyOrder.date}
                     </br>
-                    Total de la compra:$${buyOrder.total} MXN
+                    Total de la compra: $${buyOrder.total} MXN
                     </br>`,
             })
-
-        Swal.fire ({
-            title:"Gracias por tu compra...",
-            text:"Datos del comprador",
-            icon: "success",
-            timer: "1000",
-        });
-
-
 
         vaciarCarrito();
     }
